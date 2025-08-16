@@ -8,11 +8,13 @@ def download_inaturalist_images(species_name: str, max_records: int = 1000):
     Downloads iNaturalist images and appends matching metadata to metadata.csv,
     avoiding duplicates and only writing metadata after successful download.
     """
+    #species name csv file
+    specie_metadata_folder = "_".join(species_name.lower().split())
 
     # Prepare paths
     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     image_dir = os.path.join(project_root, "data", "raw", species_name.replace(" ", "_").lower())
-    metadata_path = os.path.join(project_root, "data", "metadata", "metadata.csv")
+    metadata_path = os.path.join(project_root, "data", "metadata",specie_metadata_folder, "metadata.csv")
     os.makedirs(image_dir, exist_ok=True)
     os.makedirs(os.path.dirname(metadata_path), exist_ok=True)
 
@@ -110,4 +112,6 @@ def download_inaturalist_images(species_name: str, max_records: int = 1000):
 
 
 if __name__ == "__main__":
-    download_inaturalist_images("Acridotheres tristis", max_records=5000)
+    download_inaturalist_images("Anas platyrhynchos", max_records=15000)
+    download_inaturalist_images("Rhinella marina", max_records=15000)
+    download_inaturalist_images("Vulpes vulpes", max_records=15000)

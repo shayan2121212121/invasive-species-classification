@@ -1,0 +1,13 @@
+pandas
+numpy
+matplotlib
+seaborn
+requests
+tqdm
+scikit-learn
+torch
+torchvision
+geopandas
+opencv-python
+Pillow
+ImageHash

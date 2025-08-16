@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # Define species and assign integer labels
-species_list = ["rhinella_marina", "vulpes_vulpes"]  # Add more as needed
+species_list = ["rhinella_marina", "vulpes_vulpes", "anas_platyrhynchos"]  # Add more as needed
 label_mapping = {name: idx for idx, name in enumerate(sorted(species_list))}
 
 # Directory paths

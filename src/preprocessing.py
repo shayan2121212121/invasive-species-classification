@@ -6,7 +6,7 @@ import random
 # Configuration
 source_base = "/Users/mdshayan/Desktop/invasive-species-classifier/data/raw"
 target_base = "/Users/mdshayan/Desktop/invasive-species-classifier/data/preprocessed"
-species_list = ["rhinella_marina", "vulpes_vulpes"]  # Add more as needed
+species_list = ["rhinella_marina", "vulpes_vulpes", "anas_platyrhynchos"]  # Add more as needed
 target_size = (224, 224)
 augment_count = 2  # Number of augmentations per image
 
